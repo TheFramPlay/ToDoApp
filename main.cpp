@@ -8,10 +8,7 @@
 #include <string>
 #include "./include/ToDoListManager.h"
 
-using std::cin;
-using std::cout;
-using std:: getline;
-using std:: string;
+using namespace std;
 
 int main() {
     ToDoListManager manager; //Create manager instance
