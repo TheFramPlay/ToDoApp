@@ -9,9 +9,7 @@
 #include <iostream>
 #include <ctime>
 
-using std::cout;
-using std::string;
-using std::vector;
+using namespace std;
 
 // Constructor initializes nextId
 ToDoListManager::ToDoListManager() : nextId(1) {}
