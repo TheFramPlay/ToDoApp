@@ -1,8 +1,8 @@
 /**
 * Author: Harley Garcia
 * Date: 8/31/2025
-* Purpose: Define ToDoItem Struct that will hold data for each to-do
-*         item.
+* Purpose: Main file that will run our program and output to the
+*       console.
 */
 #include <iostream>
 #include <string>
@@ -28,7 +28,7 @@ int main() {
 
         switch (choice) {
             case '1':
-                manager.printList();
+                manager.printList(); // Displays list of to-do items
                 break;
             case '2': {
                 string title, description, priority;
@@ -38,19 +38,19 @@ int main() {
                 getline(cin, description);
                 cout << "Enter priority (Low/Medium/High): ";
                 getline(cin, priority);
-                manager.addItem(title, description, priority);
+                manager.addItem(title, description, priority);  // Add item to list
                 break;
             }
             case '3': {
                 int deleteId;
                 cout << "Enter the ID of the item to delete: ";
                 cin >> deleteId;
-                cin.ignore();
-                manager.deleteItem(deleteId);
+                cin.ignore();  // clear buffer
+                manager.deleteItem(deleteId); // Deletes todo item
                 break;
             }
             case '4':
-                manager.clearList();
+                manager.clearList();  // clears entire todo items from vector
                 break;
             case '5':
                 cout << "Exiting program. Goodbye!\n";

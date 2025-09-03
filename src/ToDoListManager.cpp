@@ -21,8 +21,8 @@ void ToDoListManager::addItem(const string& title, const string& description, co
     newItem.title = title;
     newItem.description = description;
     newItem.priority = priority;
-    newItem.timestamp = getCurrentTimestamp();
-    todoList.push_back(newItem);
+    newItem.timestamp = getCurrentTimestamp(); // Get current timestamp
+    todoList.push_back(newItem); // add item to end of list.
     cout << "To-Do item added successfully!\n";
 }
 
@@ -35,7 +35,7 @@ void ToDoListManager::deleteItem(int id) {
     bool found = false;
     for (auto it = todoList.begin(); it != todoList.end(); ++it) {
         if (it->id == id) {
-            todoList.erase(it);
+            todoList.erase(it); // remove todo item from list using public method
             cout << "To-Do item deleted successfully!\n";
             found = true;
             break;
@@ -51,7 +51,7 @@ void ToDoListManager::clearList() {
     if (todoList.empty()) {
         cout << "To-Do list is already empty.\n";
     } else {
-        todoList.clear();
+        todoList.clear(); // clears todo list vector
         nextId = 1;
         cout << "To-Do list cleared successfully!\n";
     }
